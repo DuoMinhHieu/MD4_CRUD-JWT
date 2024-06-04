@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Customer</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="customer.js"></script>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header>
+    Customer Manager
+</header>
+<div id="div-btn">
+    <button onclick="successHandler()" id="display">Display list customer</button>
+    <button onclick="displayFormCreate()" id="display-create">Create new customer</button>
+</div>
+<form id="add-customer">
+    <h1>Form create</h1>
+    <table>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" placeholder="name"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" id="age" placeholder="age"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td><input type="text" id="gender" placeholder="gender"></td>
+        </tr>
+        <tr>
+            <td><label for="address">Address:</label></td>
+            <td><input type="text" id="address" placeholder="address"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" onclick="addNewCustomer()"></td>
+        </tr>
+    </table>
+</form>
+<form id="update-customer" style="display:none;">
+    <h1>Update</h1>
+    <table>
+        <tr>
+            <td><label for="update-name">Name:</label></td>
+            <td><input type="text" id="update-name" placeholder="name"></td>
+        </tr>
+        <tr>
+            <td><label for="update-age">Age:</label></td>
+            <td><input type="number" id="update-age" placeholder="age"></td>
+        </tr>
+        <tr>
+            <td><label for="update-gender">Gender:</label></td>
+            <td><input type="text" id="update-gender" placeholder="gender"></td>
+        </tr>
+        <tr>
+            <td><label for="update-address">Address:</label></td>
+            <td><input type="text" id="update-address" placeholder="address"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update" onclick="updateCustomer()"></td>
+        </tr>
+    </table>
+</form>
+<div id="customerList"></div>
+</body>
+</html>
